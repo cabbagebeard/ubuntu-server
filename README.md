@@ -18,7 +18,7 @@ sudo nano etc/sudoers.d/grader
 ```
 This creates a file and then brings you to an editing screen. Here, you will write: 
 ```
-grader ALL=(ALL) NOPASSWD:ALL
+grader ALL=(ALL:ALL) ALL
 ```
 
 ### Enforcing SSH as only authentication method
