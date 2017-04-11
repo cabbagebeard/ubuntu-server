@@ -25,6 +25,9 @@ grader ALL=(ALL) NOPASSWD:ALL
 
 ```sudo nano /etc/ssh/sshd_config```
 
+Find the line ```#What ports, IPs and protocols we listen for``` and change ```port 22``` to ```port 2200```
+
+
 Find the line ```Password Authentication yes``` change the yes to no and save the file.
 
 ```sudo service ssh restart```
