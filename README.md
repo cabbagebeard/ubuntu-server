@@ -63,4 +63,4 @@ sudo ufw allow 123
 sudo ufw allow 2200
 ```
 
-We need to accomodate for this change on the Lightsail by going to the Networking tab and to Firewall. Change the only allowed connections to ports 2200, 80, and 123.
+#### We need to accomodate for this change on the Lightsail by going to the Networking tab and to Firewall. Change the only allowed connections to ports 2200, 80, and 123.
