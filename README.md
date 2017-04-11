@@ -77,3 +77,11 @@ sudo ufw allow 2200
 ```
 
 #### We need to accomodate for this change on the Lightsail by going to the Networking tab and to Firewall. Change the only allowed connections to ports 2200, 80, and 123.
+
+### Configuring Time Zone
+
+Make sure the time is set to UTC ```sudo dpkg-reconfigure tzdata```
+
+Choose **None of the above** and **UTC**
+
+Use ```w``` to see your instance's time.
