@@ -80,7 +80,7 @@ sudo ufw allow 2200
 
 ### Configuring Time Zone
 
-Make sure the time is set to UTC ```sudo dpkg-reconfigure tzdata```
+```sudo dpkg-reconfigure tzdata```
 
 Choose **None of the above** and **UTC**
 
