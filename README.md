@@ -58,9 +58,9 @@ On the Connect tab of your Lightsail console, at the bottom you will find "You c
 
 Follow the instructions on getting that key saved onto your local machine
 
-Log in to your main user, ubuntu ```ssh ubuntu@[Lightsail IP] -p 2200 -i [your Lightsail key]```
+Log in to your main user, ubuntu ```ssh ubuntu@[Lightsail IP] -p 2200 -i [Lightsail key file location]```
 
-Now log in as grader ```ssh grader@[Lightsail IP] -p 2200 -i [your previousl generated SSH key file]```
+Now log in as grader ```ssh grader@[Lightsail IP] -p 2200 -i [previously generated SSH key file location]```
 
 ### Changing Firewall Settings
 
