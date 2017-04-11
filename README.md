@@ -85,3 +85,9 @@ sudo ufw allow 2200
 Choose **None of the above** and **UTC**
 
 Use ```w``` to see your instance's time.
+
+### Installing Apache2, Postgresql, and dependencies
+
+```sudo apt-get install apache2 python-setuptools libapache2-mod-wsgi postgresql```
+
+```sudo service apache2 restart```
