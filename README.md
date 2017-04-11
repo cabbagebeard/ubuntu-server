@@ -49,3 +49,18 @@ Next, change the file permissions using:
 sudo chmod 700 .ssh
 sudo chmod 644 .ssh/authorized_keys
 ```
+### Changing Firewall Settings
+
+Check the status of your Uncomplicated Firewall to make sure it is inactive ```sudo ufw status```
+
+Next, let's only allow incoming requests on ports for HTTP (80), NTP (123), and have our SSH on port 2200.
+```
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw deny 22
+sudo ufw allow www
+sudo ufw allow 123
+sudo ufw allow 2200
+```
+
+We need to accomodate for this change on the Lightsail by going to the Networking tab and to Firewall. Change the only allowed connections to ports 2200, 80, and 123.
