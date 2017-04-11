@@ -23,7 +23,7 @@ grader ALL=(ALL) NOPASSWD:ALL
 
 ### Enforcing SSH as only authentication method
 
-```sudo nano etc/ssh/sshd_config```
+```sudo nano /etc/ssh/sshd_config```
 
 Find the line ```Password Authentication yes``` change the yes to no and save the file.
 
