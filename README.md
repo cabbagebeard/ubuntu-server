@@ -36,7 +36,7 @@ Find the line ```Password Authentication yes``` change the yes to no and save th
 
 On your local machine run ```ssh key-gen``` it will then prompt you for a location and filename. Open that file and copy the entire contents. 
 
-In your remote command line, log in to your grader user ```sudo su - grader```
+In your remote command line, log in to your grader user ```su - grader```
 
 Create your file for key and paste the key into using:
 
@@ -52,6 +52,16 @@ Next, change the file permissions using:
 sudo chmod 700 .ssh
 sudo chmod 644 .ssh/authorized_keys
 ```
+
+### Make sure you can SSH into your instance
+On the Connect tab of your Lightsail console, at the bottom you will find "You can download your default private key from the Account page."
+
+Follow the instructions on getting that key saved onto your local machine
+
+Log in to your main user, ubuntu ```ssh ubuntu@[Lightsail IP] -i [your Lightsail key]```
+
+Now log in as grader ```ssh grader@[Lightsail IP] -i [your previousl generated SSH key file]```
+
 ### Changing Firewall Settings
 
 Check the status of your Uncomplicated Firewall to make sure it is inactive ```sudo ufw status```
