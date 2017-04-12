@@ -155,7 +155,7 @@ import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/FlaskApp/")
 
-from FlaskApp import app as application
+from catalog import app as application
 application.secret_key = [YOUR SECRET KEY]
 ```
 ### Setting up Postgresql
