@@ -110,7 +110,7 @@ sudo pip install oauth2client
  
  ```sudo mv instrument-catalog FlaskApp``` to rename project folder to FlaskApp. 
  
- ***Directory should look like /var/www/FlaskApp/FlaskApp***
+ **Directory should look like /var/www/FlaskApp/FlaskApp**
 
 
 
