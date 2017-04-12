@@ -88,7 +88,7 @@ Use ```w``` to see your instance's time.
 
 ### Installing Apache2, Postgresql, and dependencies
 
-```sudo apt-get install apache2 python-setuptools libapache2-mod-wsgi postgresql libapache2-mod-python```
+```sudo apt-get install apache2 python-setuptools libapache2-mod-wsgi postgresql```
 
 ```sudo service apache2 restart```
 
