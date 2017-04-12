@@ -62,7 +62,7 @@ Log in to your main user, ubuntu ```ssh ubuntu@[Lightsail IP] -p 2200 -i [Lights
 
 Now log in as grader ```ssh grader@[Lightsail IP] -p 2200 -i [previously generated SSH key file location]```
 
-### Changing Firewall Settings
+### Changing firewall settings
 
 Check the status of your Uncomplicated Firewall to make sure it is inactive ```sudo ufw status```
 
@@ -78,7 +78,7 @@ sudo ufw allow 2200
 
 #### We need to accomodate for this change on the Lightsail by going to the Networking tab and to Firewall. Change the only allowed connections to ports 2200, 80, and 123.
 
-### Configuring Time Zone
+### Configuring time zone
 
 ```sudo dpkg-reconfigure tzdata```
 
@@ -91,3 +91,26 @@ Use ```w``` to see your instance's time.
 ```sudo apt-get install apache2 python-setuptools libapache2-mod-wsgi postgresql```
 
 ```sudo service apache2 restart```
+
+```
+sudo apt-get install git
+sudo apt-get install python-pip
+sudo apt-get install python-psycopg2 python-flask 
+sudo pip install sqlalchemy
+sudo pip install oauth2client
+```
+
+### Setup project directory and clone project
+
+ ```cd /var/www``` to navigate to /var/www
+ 
+ ```mkdir FlaskApp``` to create directory and ```cd FlaskApp``` to navigate in
+ 
+ ```git clone https://github.com/cabbagebeard/instrument-catalog.git``` to clone repository into FlaskApp
+ 
+ ```sudo mv instrument-catalog FlaskApp``` to rename project folder to FlaskApp. 
+ 
+ ***Directory should look like /var/www/FlaskApp/FlaskApp***
+
+
+
