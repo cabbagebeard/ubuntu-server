@@ -139,3 +139,22 @@ of the .conf file:
 ```
 
 ```sudo a2ensite FlaskApp``` to enable Virtual Host
+
+
+### Create wsgi File
+
+```cd /var/www/FlaskApp```
+
+```sudo nano flaskapp.wsgi```
+
+Paste this in as the contents of the file, adding your secret key:
+```
+#!/usr/bin/python
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0,"/var/www/FlaskApp/")
+
+from FlaskApp import app as application
+application.secret_key = [YOUR SECRET KEY]
+```
