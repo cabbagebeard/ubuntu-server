@@ -88,7 +88,7 @@ Use ```w``` to see your instance's time.
 
 ### Installing Apache2, Postgresql, and dependencies
 
-```sudo apt-get install apache2 python-setuptools libapache2-mod-wsgi postgresql```
+```sudo apt-get install apache2 python-setuptools libapache2-mod-wsgi postgresql libapache2-mod-python```
 
 ```sudo service apache2 restart```
 
@@ -122,7 +122,7 @@ of the .conf file:
 <VirtualHost *:80>
 		ServerName [YOUR IP OR WEB ADDRESS]
 		ServerAdmin [YOUR EMAIL ADDRESS]
-		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
+		WSGIScriptAlias / /var/www/FlaskApp/FlaskApp.wsgi
 		<Directory /var/www/FlaskApp/FlaskApp/>
 			Order allow,deny
 			Allow from all
@@ -145,7 +145,7 @@ of the .conf file:
 
 ```cd /var/www/FlaskApp```
 
-```sudo nano flaskapp.wsgi```
+```sudo nano FlaskApp.wsgi```
 
 Paste this in as the contents of the file, adding your secret key:
 ```
@@ -158,3 +158,9 @@ sys.path.insert(0,"/var/www/FlaskApp/")
 from FlaskApp import app as application
 application.secret_key = [YOUR SECRET KEY]
 ```
+### Setting up Postgresql
+
+Log in as postgres user ```sudo su - postgres```
+
+Access Postgres terminal ```psql```
+
