@@ -112,5 +112,30 @@ sudo pip install oauth2client
  
  **Directory should look like /var/www/FlaskApp/FlaskApp**
 
+### Set up Virtual Host
 
+```sudo nano /etc/apache2/sites-available/FlaskApp.conf``` to simultaneously create and edit a FlaskApp.conf file
 
+Paste this as the contents, changing the ServerName and ServerAdmin to your information
+of the .conf file: 
+```
+<VirtualHost *:80>
+		ServerName [YOUR IP OR WEB ADDRESS]
+		ServerAdmin [YOUR EMAIL ADDRESS]
+		WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi
+		<Directory /var/www/FlaskApp/FlaskApp/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/FlaskApp/FlaskApp/static
+		<Directory /var/www/FlaskApp/FlaskApp/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost> 
+```
+
+```sudo a2ensite FlaskApp``` to enable Virtual Host
