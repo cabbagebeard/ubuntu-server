@@ -166,3 +166,22 @@ Log in as postgres user ```sudo su - postgres```
 
 Access Postgres terminal ```psql```
 
+```CREATE USER catalog WITH PASSWORD 'password';```
+
+```CREATE DATABASE catalog WITH OWNER catalog;```
+
+Connect to your new database ```\c catalog```
+
+```REVOKE ALL ON SCHEMA public FROM public;```
+
+```GRANT ALL ON SCHEMA public TO catalog;```
+
+Use ```\q``` to exit psql and ```exit``` to log out of postgres user.
+
+In catalog.py, database_setup.py, and categoriesanditems.py change 
+
+```engine = create_engine([OLD DATABASE])```
+
+to:
+
+```engine = create_engine('postgresql://catalog:sillypassword@localhost/catalog')```
