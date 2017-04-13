@@ -120,7 +120,7 @@ Paste this as the contents, changing the ServerName and ServerAdmin to your info
 of the .conf file: 
 ```
 <VirtualHost *:80>
-		ServerName [YOUR IP OR WEB ADDRESS]
+		ServerName [YOUR PUBLIC IP OR WEB ADDRESS]
 		ServerAlias [IF APPLICLABLE]
 		ServerAdmin [YOUR EMAIL ADDRESS]
 		WSGIScriptAlias / /var/www/FlaskApp/FlaskApp.wsgi
@@ -138,6 +138,7 @@ of the .conf file:
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost> 
 ```
+***You can use*** ```nslookup [YOUR PUBLIC IP]``` ***to find alias name***
 
 ```sudo a2ensite FlaskApp``` to enable Virtual Host
 
