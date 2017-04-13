@@ -185,3 +185,9 @@ In catalog.py, database_setup.py, and categoriesanditems.py change
 to:
 
 ```engine = create_engine('postgresql://catalog:sillypassword@localhost/catalog')```
+
+Now let's set up the database by running:
+```
+python /var/www/FlaskApp/FlaskApp/database_setup.py
+python /var/www/FlaskApp/FlaskApp/categoriesanditems.py
+```
