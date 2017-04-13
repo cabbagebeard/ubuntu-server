@@ -1,3 +1,7 @@
+#### My public IP is 54.84.202.181
+
+#### Site is running at http://ec2-54-84-202-181.compute-1.amazonaws.com
+
 # Setting up a remote server using Ubuntu
 
 Create an instance on your VPS of choice, Amazon Lightsail is what I'll be using.
