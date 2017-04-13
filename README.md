@@ -121,6 +121,7 @@ of the .conf file:
 ```
 <VirtualHost *:80>
 		ServerName [YOUR IP OR WEB ADDRESS]
+		ServerAlias [IF APPLICLABLE]
 		ServerAdmin [YOUR EMAIL ADDRESS]
 		WSGIScriptAlias / /var/www/FlaskApp/FlaskApp.wsgi
 		<Directory /var/www/FlaskApp/FlaskApp/>
