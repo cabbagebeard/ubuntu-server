@@ -191,3 +191,10 @@ Now let's set up the database by running:
 python /var/www/FlaskApp/FlaskApp/database_setup.py
 python /var/www/FlaskApp/FlaskApp/categoriesanditems.py
 ```
+### Auth changes
+
+I got an error in my catalog.py file for all the lines that are ```json.loads(open([FILE], 'r')...```
+
+In order to fix this, I put in the complete path to that file:
+
+```json.loads(open('/var/www/FlaskApp/FlaskApp/client_id.json', 'r')...```
