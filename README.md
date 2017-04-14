@@ -202,3 +202,11 @@ I got an error in my catalog.py file for all the lines that are ```json.loads(op
 In order to fix this, I put in the complete path to that file:
 
 ```json.loads(open('/var/www/FlaskApp/FlaskApp/client_id.json', 'r')...```
+
+Update your permitted URLs on Facebook Developer Console and Google Developer Console.
+
+Update your client_id.json file to accomodate for changes to your preferences on Google Developer Console.
+
+### Get the ball rolling
+
+Restart your server ```sudo service apache2 restart``` and check out your application!
