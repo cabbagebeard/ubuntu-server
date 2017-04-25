@@ -188,7 +188,7 @@ In catalog.py, database_setup.py, and categoriesanditems.py change
 
 to:
 
-```engine = create_engine('postgresql://catalog:sillypassword@localhost/catalog')```
+```engine = create_engine('postgresql://catalog:password@localhost/catalog')```
 
 Now let's set up the database by running:
 ```
