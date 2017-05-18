@@ -1,3 +1,6 @@
+### This is a walkthrough for getting a Virtual Private Server set up and running for hosting a web application.
+
+
 #### My public IP is 54.84.202.181
 
 #### Site is running at http://ec2-54-84-202-181.compute-1.amazonaws.com
