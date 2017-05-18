@@ -1,4 +1,4 @@
-### This is a walkthrough for getting a Virtual Private Server set up and running for hosting a web application.
+# This is a walkthrough for getting a Virtual Private Server set up and running for hosting a web application.
 
 
 #### My public IP is 54.84.202.181
